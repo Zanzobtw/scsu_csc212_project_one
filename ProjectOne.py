@@ -24,7 +24,7 @@ print(state_capitals_dict)
 
 user_input = input("Do you want to start, yes or no? " )
 
-while user_input != "no":
+while user_input == "yes" and user_input != "no":
     state_input = input("Enter a state, I will output the capital. ")
     print(state_capitals_dict[state_input])
     user_input = input("Do you want to continue, yes or no? ")
