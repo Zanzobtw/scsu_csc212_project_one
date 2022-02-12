@@ -6,9 +6,6 @@
 #   dictionary[key] = value
 # step one.eight_two_five
 #   go back to step one.five
-from tkinter import N
-
-
 state_capitals = open("state_capitals.txt", "r")
 
 state_capitals_dict = {}
