@@ -1,5 +1,6 @@
 from asyncore import read
 
+print("hello there\n")
 
 CapitalsText = open("state_capitals.txt")
-print(Capitals_Text.read())
+print(CapitalsText.read())
