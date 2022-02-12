@@ -20,8 +20,6 @@ while capitals_line != '':
     state_capitals_dict[key] = value
     capitals_line = state_capitals.readline()
 
-print(state_capitals_dict)
-
 user_input = input("Do you want to start, yes or no? " )
 
 while user_input.lower() != 'yes' and user_input.lower() != 'no':
