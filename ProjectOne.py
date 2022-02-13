@@ -6,6 +6,9 @@
 #   dictionary[key] = value
 # step one.eight_two_five
 #   go back to step one.five
+
+# Phase One
+
 state_capitals = open("state_capitals.txt", "r")
 
 state_capitals_dict = {}
@@ -31,3 +34,6 @@ while user_input.lower() == "yes" and user_input.lower() != "no":
     user_input = input("Do you want to continue, yes or no? " )
     while user_input.lower() != 'yes' and user_input.lower() != 'no':
         user_input = input("Do you want to continue, yes or no? " )
+
+states_list = state_capitals_dict.keys()
+states_list = list(states_list)
