@@ -7,7 +7,7 @@
 # step one.eight_two_five
 #   go back to step one.five
 
-# Phase One
+import random
 
 state_capitals = open("state_capitals.txt", "r")
 
@@ -37,3 +37,20 @@ while user_input.lower() == "yes" and user_input.lower() != "no":
 
 states_list = state_capitals_dict.keys()
 states_list = list(states_list)
+
+correct_count = 0
+incorrect_count = 0
+
+for i in range(5):
+    states_list_random = states_list[random.randrange(1, 50)]
+    print(states_list_random)
+    user_input = input("What is the state's capital? ").title()
+    if user_input == state_capitals_dict[states_list_random]:
+        print("That is correct.")
+        correct_count = correct_count + 1
+    else:
+        print("That is incorrect.")
+        incorrect_count = incorrect_count + 1
+
+print("You got ", correct_count, " questions correct.")
+print("You got ", incorrect_count, " questions incorrect.")
