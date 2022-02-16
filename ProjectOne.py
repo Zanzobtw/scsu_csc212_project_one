@@ -26,12 +26,12 @@ while capitals_line != '':
 user_input = input("Do you want to study or quiz yourself? " )
 
 while user_input.lower() != 'study' and user_input.lower() != 'quiz':
-    user_input = input("Do you want to start, yes or no? " )
+    user_input = input("I do not understand, do you want to study or quiz yourself? " )
 
 while user_input.lower() == "study" and user_input.lower() != "quiz":
     state_input = input("Enter a state, I will output the capital. ")
     print(state_capitals_dict[state_input.title()])
-    user_input = input("Do you want to continue, yes or no? " )
+    user_input = input("Do you want to continue studying, yes or no? " )
     while user_input.lower() != 'yes' and user_input.lower() != 'no':
         user_input = input("Do you want to continue, yes or no? " )
 
