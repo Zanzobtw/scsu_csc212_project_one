@@ -23,13 +23,15 @@ while capitals_line != '':
     state_capitals_dict[key] = value
     capitals_line = state_capitals.readline()
 
-user_input = input("Do you want to study or quiz yourself? " )
+state_capitals_dict_keys = state_capitals_dict.keys()
+
+user_input = input("Do you want to study or quiz yourself? \n" )
 
 while user_input.lower() != 'study' and user_input.lower() != 'quiz':
-    user_input = input("I do not understand, do you want to study or quiz yourself? " )
+    user_input = input("I do not understand, do you want to study or quiz yourself? ")
 
 while user_input.lower() == "study" and user_input.lower() != "quiz":
-    state_input = input("Enter a state, I will output the capital. ")
+    state_input = input("\nEnter a state, I will output the capital. ")
     print(state_capitals_dict[state_input.title()])
     user_input = input("Do you want to continue studying, yes or no? " )
     while user_input.lower() != 'yes' and user_input.lower() != 'no':
@@ -41,16 +43,16 @@ states_list = list(states_list)
 correct_count = 0
 incorrect_count = 0
 
-for i in range(5):
-    states_list_random = states_list[random.randrange(1, 50)]
-    print(states_list_random)
-    user_input = input("What is the state's capital? ").title()
-    if user_input == state_capitals_dict[states_list_random]:
-        print("That is correct.")
-        correct_count = correct_count + 1
-    else:
-        print("That is incorrect.")
-        incorrect_count = incorrect_count + 1
-
-print("You got ", correct_count, " questions correct.")
-print("You got ", incorrect_count, " questions incorrect.")
+if user_input.lower() == 'no':
+    for i in range(5):
+        states_list_random = states_list[random.randrange(1, 50)]
+        print("\n",states_list_random)
+        user_input = input("What is the state's capital? ").title()
+        if user_input == state_capitals_dict[states_list_random]:
+            print("That is correct.")
+            correct_count = correct_count + 1
+        else:
+            print("That is incorrect.")
+            incorrect_count = incorrect_count + 1
+    print("You got ", correct_count, " questions correct, and ", incorrect_count, " questions incorrect.")
+    print("Goodbye.")
